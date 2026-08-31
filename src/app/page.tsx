@@ -11,13 +11,13 @@ const featured = [
     src: "/images/cookies.jpg",
     label: "COOKIE PHOTO",
     title: "Warm Cookies",
-    body: "Thick, chewy, and baked to order in twelve rotating flavors. Best eaten warm.",
+    body: "Thick, chewy, and baked to order in eleven rotating flavors. Best eaten warm.",
   },
   {
     src: "/images/ice-cream.jpg",
     label: "ICE CREAM PHOTO",
     title: "Ice Cream Scoops",
-    body: "Sixteen house-made flavors including Baklava, Dubai Chocolate, and Beurre Noisette.",
+    body: "Sixteen house-made flavors including Dubai Chocolate, Kitty Kitty Bang Bang, and Sea Salt Caramel Truffle.",
   },
   {
     src: "/images/dirty-sodas.jpg",
@@ -62,11 +62,14 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.45}>
             <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button href={links.uberEats} variant="primary" size="lg" external>
+              <Button href={links.uberEats} variant="primary" size="xl" external>
                 Order Now
               </Button>
               <Button href={links.toastRewards} variant="secondary" size="lg">
                 Join Rewards
+              </Button>
+              <Button href={links.laTimes} variant="secondary" size="lg" external>
+                Read Our Crz Story
               </Button>
             </div>
           </Reveal>

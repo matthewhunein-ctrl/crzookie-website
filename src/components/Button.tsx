@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 type Variant = "primary" | "secondary" | "white" | "pink";
-type Size = "md" | "lg";
+type Size = "md" | "lg" | "xl";
 
 type Props = {
   href: string;
@@ -18,6 +18,8 @@ const base =
 const sizes: Record<Size, string> = {
   md: "px-6 py-3 text-sm",
   lg: "px-8 py-4 text-base",
+  // 2x the lg padding, with a proportionally larger label.
+  xl: "px-16 py-8 text-2xl",
 };
 
 const variants: Record<Variant, string> = {
