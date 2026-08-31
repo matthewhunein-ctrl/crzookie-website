@@ -83,7 +83,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="rounded-sm underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink focus-visible:ring-offset-2"
                 >
-                  Crz Story
+                  Our Crz Story
                 </a>
               </div>
             </div>
