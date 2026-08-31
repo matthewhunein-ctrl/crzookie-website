@@ -61,16 +61,31 @@ export default function Home() {
             </p>
           </Reveal>
           <Reveal delay={0.45}>
-            <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-9 flex flex-col items-center justify-center gap-5">
               <Button href={links.uberEats} variant="primary" size="xl" external>
                 Order Now
               </Button>
-              <Button href={links.toastRewards} variant="secondary" size="lg">
-                Join Rewards
-              </Button>
-              <Button href={links.laTimes} variant="secondary" size="lg" external>
-                Read Our Crz Story
-              </Button>
+              <div className="flex items-center gap-4 font-body text-base text-white/90">
+                <a
+                  href={links.toastRewards}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-sm underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink focus-visible:ring-offset-2"
+                >
+                  Rewards
+                </a>
+                <span aria-hidden="true" className="text-white/40">
+                  |
+                </span>
+                <a
+                  href={links.laTimes}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-sm underline-offset-4 transition-colors hover:text-white hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink focus-visible:ring-offset-2"
+                >
+                  Crz Story
+                </a>
+              </div>
             </div>
           </Reveal>
         </div>
