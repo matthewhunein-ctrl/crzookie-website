@@ -176,7 +176,7 @@ export default function Home() {
               Something for Every Craving
             </h2>
             <p className="mt-5 font-body leading-relaxed text-ink-mid">
-              Twelve cookie flavors baked fresh all day, sixteen unique ice cream
+              Eleven cookie flavors baked fresh all day, sixteen unique ice cream
               flavors, refreshing dirty sodas, and hand-spun milkshakes. Mix,
               match, and build your perfect dessert.
             </p>
@@ -184,8 +184,8 @@ export default function Home() {
 
           <div className="mt-14 grid grid-cols-2 gap-5 lg:grid-cols-4">
             {featured.map((card, i) => (
-              <Reveal key={card.title} delay={i * 0.1}>
-                <article className="overflow-hidden rounded-[var(--radius-card)] bg-white shadow-card transition-transform duration-300 hover:-translate-y-1">
+              <Reveal key={card.title} delay={i * 0.1} className="h-full">
+                <article className="flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] bg-white shadow-card transition-transform duration-300 hover:-translate-y-1">
                   <Photo src={card.src} label={card.label} ratio="1 / 1" rounded={false} />
                   <div className="p-5">
                     <h3 className="font-display text-lg text-ink">{card.title}</h3>
