@@ -4,7 +4,6 @@ import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import InstagramGrid from "@/components/InstagramGrid";
-import CateringForm from "@/components/CateringForm";
 import { links } from "@/lib/site";
 
 const featured = [
@@ -66,7 +65,7 @@ export default function Home() {
               <Button href={links.uberEats} variant="primary" size="xl" external>
                 Order Now
               </Button>
-              <div className="flex items-center gap-4 font-body text-base text-white/90">
+              <div className="flex items-center gap-6 font-body text-xl font-medium text-white/90">
                 <a
                   href={links.toastRewards}
                   target="_blank"
@@ -140,8 +139,10 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.15} className="mt-10">
-            <CateringForm source="Homepage" />
+          <Reveal delay={0.15} className="mt-8 text-center">
+            <Button href="/contact#catering" variant="primary" size="lg">
+              Start a Catering Inquiry
+            </Button>
           </Reveal>
         </div>
       </section>

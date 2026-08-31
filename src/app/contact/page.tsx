@@ -76,7 +76,7 @@ export default function ContactPage() {
       </section>
 
       {/* Catering */}
-      <section className="bg-blue py-24 text-white">
+      <section id="catering" className="scroll-mt-24 bg-blue py-24 text-white">
         <div className="mx-auto max-w-3xl px-6">
           <Reveal className="text-center">
             <SectionEyebrow light>Catering</SectionEyebrow>

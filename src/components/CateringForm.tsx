@@ -9,12 +9,7 @@ const fieldBase =
   "w-full rounded-xl border border-line bg-white px-4 py-3 font-body text-sm text-ink placeholder:text-ink-mid/70 focus:border-blue focus:outline-none focus:ring-2 focus:ring-blue/30";
 const labelBase = "mb-1.5 block font-body text-sm font-medium text-blue-dark";
 
-type Props = {
-  /** Optional label identifying which page the inquiry came from. */
-  source?: string;
-};
-
-export default function CateringForm({ source }: Props) {
+export default function CateringForm() {
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -59,7 +54,6 @@ export default function CateringForm({ source }: Props) {
       onSubmit={handleSubmit}
       className="rounded-[var(--radius-card)] bg-white p-7 shadow-pop sm:p-9"
     >
-      {source && <input type="hidden" name="source" value={source} />}
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label className={labelBase} htmlFor="name">Name</label>
