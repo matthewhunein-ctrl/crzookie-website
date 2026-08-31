@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* ============================================================
+   CRZOOKIE — brand design tokens (single source of truth).
+   Bubblegum-sticker logo energy, but premium dessert brand.
+   ============================================================ */
+@theme {
+  /* Brand colors (from brand brief) */
+  --color-blue: #6b9fd4; /* cornflower blue — main brand color */
+  --color-blue-light: #a8c8e8; /* lighter blue for gradients/placeholders */
+  --color-blue-dark: #4d82bd; /* hover/pressed */
+  --color-pink: #f4a0c0; /* bubblegum pink — accents, borders */
+  --color-pink-dark: #d6608b; /* pink text on light backgrounds */
+  --color-offwhite: #f9f7ff; /* cool near-white section backgrounds */
+  --color-navy: #1a1f35; /* near-black footer / dark sections */
+  --color-ink: #2d2d2d; /* body text */
+  --color-ink-mid: #6b6b6b; /* subtext, captions */
+  --color-line: #e5e7eb; /* hairline borders */
+
+  /* Delivery brand accents */
+  --color-doordash: #ff3008;
+  --color-ubereats: #06c167;
+
+  /* Typography — wired to next/font CSS variables (see layout.tsx).
+     Display = Archivo Narrow (condensed headlines), Body = Archivo. */
+  --font-display: var(--font-archivo-narrow), "Arial Narrow", "Segoe UI",
+    system-ui, sans-serif;
+  --font-body: var(--font-archivo), "Segoe UI", system-ui, -apple-system,
+    sans-serif;
+
+  /* Soft, premium shadows */
+  --shadow-card: 0 1px 2px rgba(26, 31, 53, 0.04),
+    0 10px 30px rgba(26, 31, 53, 0.08);
+  --shadow-pop: 0 4px 10px rgba(26, 31, 53, 0.08),
+    0 18px 40px rgba(26, 31, 53, 0.14);
+
+  /* Brand easing + radii */
+  --ease-brand: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --radius-card: 20px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--color-white);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* ============================================================
+   Utilities
+   ============================================================ */
+
+/* Subtle repeating cookie/drip texture — hero atmosphere only */
+.cookie-pattern {
+  background-image: url("/cookie-pattern.svg");
+  background-repeat: repeat;
+  background-size: 110px 110px;
+}
+
+/* Reviews marquee track — fades handled by parent mask */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
