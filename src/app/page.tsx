@@ -4,6 +4,7 @@ import Photo from "@/components/Photo";
 import Reveal from "@/components/Reveal";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import InstagramGrid from "@/components/InstagramGrid";
+import CateringForm from "@/components/CateringForm";
 import { links } from "@/lib/site";
 
 const featured = [
@@ -121,6 +122,27 @@ export default function Home() {
               />
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ===== Section 2b — Catering ===== */}
+      <section className="bg-offwhite py-24">
+        <div className="mx-auto max-w-3xl px-6">
+          <Reveal className="text-center">
+            <SectionEyebrow>Parties, Offices &amp; Weddings</SectionEyebrow>
+            <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3rem)] text-ink">
+              We Cater!
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl font-body leading-relaxed text-ink-mid">
+              Warm cookies and cold scoops, brought to your event. Tell us what
+              you&apos;re planning and we&apos;ll get back to you within 24
+              hours.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.15} className="mt-10">
+            <CateringForm source="Homepage" />
+          </Reveal>
         </div>
       </section>
 
